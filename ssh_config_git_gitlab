@@ -1,1 +1,28 @@
- ssh -T github.com-murali
+
+
+example ssh configuration file
+
+#Account1
+User git
+Host github.com-kumar
+HostName github.com
+IdentityFile ~/.ssh/murali_personal_id_rsa
+
+
+git lab
+
+#Account3
+User git
+Host gitlab.com-kumar
+Hostname gitlab.com
+IdentityFile ~/.ssh/murali_work_gitlab_id_rsa
+
+ssh connection checking
+
+
+ssh -T Host
+as menstioned config file of ssh configuration
+
+
+example
+ssh -T github.com-murali
