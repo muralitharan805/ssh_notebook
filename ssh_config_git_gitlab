@@ -1,4 +1,21 @@
+cd ~/.ssh
 
+Genrating SSh 
+
+ssh-keygen
+
+you wil get 2 files in ~/.ssh directive
+
+kumar_gitlab  kumar_gitlab.pub
+
+open kumar_gitlab.pub your file get your keys
+
+then add your private key
+
+ssh-add murali_github
+
+
+genrate config file create below example config file
 
 example ssh configuration file
 
@@ -26,6 +43,3 @@ as menstioned config file of ssh configuration
 
 example
 ssh -T github.com-murali
-
-
-new line
