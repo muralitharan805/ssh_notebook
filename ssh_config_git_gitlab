@@ -1,4 +1,10 @@
+ssh-keygen -t ed25519 -C "file_name"
 
+eval "$(ssh-agent -s)"
+
+ssh-add file_name
+
+ssh-add -l
 
 example ssh configuration file
 
