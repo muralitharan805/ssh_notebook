@@ -35,3 +35,5 @@ ssh -T github.com-murali
 
 
 new line
+
+ git clone git@uraddhostnameinconfig
