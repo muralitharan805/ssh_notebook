@@ -1,39 +1,24 @@
-ssh-keygen -t ed25519 -C "file_name"
-
+ssh-keygen -t ed25519 -C "label"
 eval "$(ssh-agent -s)"
-
-ssh-add file_name
-
+ssh-add private_key_file_name
 ssh-add -l
-
-example ssh configuration file
-
-#Account1
+# Account1
 User git
-Host github.com-kumar
+Host github.com-personal
 HostName github.com
-IdentityFile ~/.ssh/murali_personal_id_rsa
-
-
-git lab
-
-#Account3
+IdentityFile ~/.ssh/private_key_file(available wihtout any extension)
+# Account2
 User git
-Host gitlab.com-kumar
+Host github.com-work
+HostName github.com
+IdentityFile ~/.ssh/private_key_file(available wihtout any extension)
+# gitlab
+# Account3
+User git
+Host gitlab.com-personal
 Hostname gitlab.com
-IdentityFile ~/.ssh/murali_work_gitlab_id_rsa
-
-ssh connection checking
-
-
+IdentityFile ~/.ssh/private_key_file(available wihtout any extension)
 ssh -T Host
-as menstioned config file of ssh configuration
-
-
-example
-ssh -T github.com-murali
-
-
-new line
-
- git clone git@uraddhostnameinconfig
+ssh -T github.com-personal
+git clone git@github.com:xxx/xxx.git
+git clone git@github.com-personal:xxx/xxx.git
